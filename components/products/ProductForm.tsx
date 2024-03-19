@@ -199,7 +199,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               name="price"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Price ($)</FormLabel>
+                  <FormLabel>Price (रु)</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
@@ -217,7 +217,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               name="expense"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Expense ($)</FormLabel>
+                  <FormLabel>Expense (रु)</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
@@ -269,7 +269,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
                 </FormItem>
               )}
             />
-           
+            {collections.length > 0 && (
               <FormField
                 control={form.control}
                 name="collections"
@@ -297,7 +297,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
                   </FormItem>
                 )}
               />
-          
+            )}
             <FormField
               control={form.control}
               name="colors"
